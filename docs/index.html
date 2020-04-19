@@ -1,12 +1,83 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<meta charset='utf-8' />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" media="all" href="style.css">
-	<title>gh-pages template</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+  <title>t-der.gihub.io</title>
 </head>
 <body>
-  <div id="helloworld">Hello world!</div>
+	<!-- Tab links -->
+	<div class="tab">
+	  <button class="tablinks" onclick="openTab(event, 'Menu')">Menu</button>
+	  <button class="tablinks" onclick="openTab(event, 'Board')">Board</button>
+	  <button class="tablinks" onclick="openTab(event, 'Chat')">Chat</button>
+	  <button class="tablinks" onclick="openTab(event, 'Debug')">Debug</button>
+	</div>
+
+	<!-- Tab content -->
+	<div id="Menu" class="tabcontent">
+		<h3>Menu</h3>
+		<h4>Create Session</h4>
+		<label>Session Key:</label>
+		<input type="text" id="sessionKey" name="xyz">
+		<button id="keyGen" onclick="genKey('sessionKey')">Generate Key</button>
+		<button id="keyCopy" onclick="copy2ClipBoard('sessionKey')">Copy Key</button>
+		<h4>Join Session</h4>
+		<p>London is the capital city of England.</p>
+	</div>
+
+	<div id="Board" class="tabcontent">
+	  <h3>Board</h3>
+	  <canvas id="canvas" />
+	  <p>Paris is the capital of France.</p>
+	</div>
+
+	<div id="Chat" class="tabcontent">
+	  <h3>Chat</h3>
+	  <p>Tokyo is the capital of Japan.</p>
+	</div>
+	
+	<div id="Debug" class="tabcontent">
+	  <h3>Debug</h3>
+	  <p>Tokyo is the capital of Japan.</p>
+	</div>
+<!--	<div id="comp-main--head-bar">
+		<button id="comp-main--head-bar-item" onclick="show_div('comp-main--menu')">
+			Menu
+		</button>
+		<button id="comp-main--head-bar-item" onclick="show_div('comp-main--board')">
+			Board
+		</button>
+		<button id="comp-main--head-bar-item" onclick="show_div('comp-main--chat')">
+			Chat
+		</button>
+		<button id="comp-main--head-bar-item" onclick="show_div('comp-main--debug')">
+			Debug
+		</button>
+	</div>
+	<div id="comp-main--menu">
+		menu
+	
+	</div>
+	<div id="comp-main--board">
+		board
+	
+	</div>
+	<div id="comp-main--chat">
+		chat
+	
+	</div>
+	<div id="comp-main--debug">
+		debug
+	
+	</div> -->
+	
+	
+	<!-- <script src="scripts/comp_canvas.js"></script> -->
+	<!-- <script src="scripts/comp_control_bar.js"></script> -->
+	<script src="scripts/main.js"></script>
+	<script src="scripts/board.js"></script>
+	<!-- <script src="scripts/comp_menu_bar.js"></script>
+	<!-- <script src="scripts/dummy_animation.js"></script> -->
 </body>
 </html>
