@@ -21,8 +21,11 @@
 		<label>Session Key:</label>
 		<input type="text" id="sessionKey" name="xyz">
 		<button id="keyGen" onclick="genKey('sessionKey')">Generate Key</button>
-		<button id="keyCopy" onclick="copy2ClipBoard('sessionKey')">Copy Key</button>
+		<button id="keyCopy" onclick="writeToClipboard('sessionKey')">Copy Key</button>
 		<h4>Join Session</h4>
+		<label>Session Key:</label>
+		<input type="text" id="sessionKeyJoin" name="xyz">
+		<button id="keyCopy" onclick="readFromClipboard('sessionKeyJoin')">Paste Key from Clipboard</button>
 		<p>London is the capital city of England.</p>
 		<a href="https://t-der.github.io/home/">home</a>
 	</div>

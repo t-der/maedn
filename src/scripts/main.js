@@ -61,17 +61,29 @@ function randomString2(nbChars) {
 
 
 
-function copy2ClipBoard(idTxtSrc) {
-  /* Get the text field */
-  var copyText = document.getElementById(idTxtSrc);
 
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
 
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
 
-  /* Alert the copied text */
-  //alert("Copied the text: " + copyText.value);
+function writeToClipboard(idTxtSrc) {
+	var copyText = document.getElementById(idTxtSrc);
+	copyText.select();
+	copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+	navigator.clipboard.writeText(copyText.value)
+	.then(() => {
+	// Success!
+	})
+	.catch(err => {
+		console.log('Something went wrong', err);
+	});
+}
+
+function readFromClipboard(idTxtSrc) {
+	navigator.clipboard.readText()
+	.then(text => {
+		document.getElementById(idTxtSrc).value = text;
+	})
+	.catch(err => {
+	// maybe user didn't grant access to read from clipboard
+		console.log('Something went wrong', err);
+	});
 }
